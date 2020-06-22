@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import ThemecontextProvider from './context/ThemeContext';
+import ChangeToggle from './components/ChangeToggle';
+import UseHook from './components/UseHook';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemecontextProvider>
+        <h1>concac</h1>
+      <Navbar />
+      <ChangeToggle />
+      <UseHook />
+      </ThemecontextProvider>
     </div>
   );
 }
